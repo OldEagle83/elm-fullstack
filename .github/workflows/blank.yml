@@ -12,7 +12,7 @@ jobs:
       with:
         dotnet-version: '3.0.100'
     - name: Try use dotnet core 3
-    - run: dotnet --info
+      run: dotnet --info
     - uses: actions/checkout@v1
     - name: Run a one-line script
       run: echo Hello, world!
