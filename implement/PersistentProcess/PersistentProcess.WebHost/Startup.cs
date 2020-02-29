@@ -25,9 +25,8 @@ namespace Kalmit.PersistentProcess.WebHost
             _logger.LogDebug("Testing LogDebug");
         }
 
-        public void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services, IServiceProvider serviceProvider)
         {
-            var serviceProvider = services.BuildServiceProvider();
             var config = serviceProvider.GetService<IConfiguration>();
 
             Composition.Component webAppConfig = null;
